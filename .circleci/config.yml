@@ -13,5 +13,9 @@ jobs:
             - run: npm test
 workflows:
     build-and-test:
+      filters:
+        branches:
+          only:
+            - master
       jobs:
         - build-and-test
