@@ -1,11 +1,11 @@
 Resume as a Service (RaaS)
 =====================
-
-This is a React based CMS for a small personal website. We're under construction right now!
+*Currrently under construction*
+This is a React based CMS for a small personal website.
 
 Under the Hood
 --------------
-# React
+* React
 * Bootstrap v4
 * The Open Source Community <3
 
