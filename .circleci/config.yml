@@ -1,8 +1,9 @@
 version: 2.1
 orbs:
   node: circleci/node@1.1.6
+  aws-ecr: circleci/aws-ecr@6.10.0
 jobs:
-  build-and-test:
+  npm_install_and_test:
     executor:
       name: node/default
     steps:
@@ -11,11 +12,49 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
+
 workflows:
-    build-and-test:
-      filters:
-        branches:
-          only:
-            - master
-      jobs:
-        - build-and-test
+  dev:
+    jobs:
+      - npm_install_and_test:
+          filters:
+            branches:
+              only: dev
+      - aws-ecr/build-and-push-image:
+          requires:
+            - npm_install_and_test
+          filters:
+            branches:
+              only: dev
+          account-url: AWS_ECR_ACCOUNT_URL
+          aws-access-key-id: ACCESS_KEY_ID
+          aws-secret-access-key: SECRET_ACCESS_KEY
+          context: aws-ecr
+          dockerfile: Dockerfile
+          no-output-timeout: 20m
+          path: .
+          region: AWS_REGION
+          repo: resume-as-a-service
+          tag: 'latest-dev'
+  master:
+    jobs:
+      - npm_install_and_test:
+          filters:
+            branches:
+              only: master
+      - aws-ecr/build-and-push-image:
+          requires:
+            - npm_install_and_test
+          filters:
+            branches:
+              only: master
+          account-url: AWS_ECR_ACCOUNT_URL
+          aws-access-key-id: ACCESS_KEY_ID
+          aws-secret-access-key: SECRET_ACCESS_KEY
+          context: aws-ecr
+          dockerfile: Dockerfile
+          no-output-timeout: 20m
+          path: .
+          region: AWS_REGION
+          repo: resume-as-a-service
+          tag: 'latest-prod'
