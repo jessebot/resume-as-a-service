@@ -1,0 +1,19 @@
+.App {
+  text-align: center;
+  background-color: #212529;
+  color: silver;
+  justify-content: center;
+  align-items: center;
+  flex-direction: center;
+  display: center;
+}
+
+body {
+  text-align: center;
+  background-color: #212529;
+  color: silver;
+  justify-content: center;
+  align-items: center;
+  flex-direction: center;
+  display: center;
+}
