@@ -12,6 +12,25 @@ jobs:
           steps:
             - run: npm install
             - run: npm test
+      - persist_to_workspace:
+          root: /home/circleci
+          paths:
+            - project
+
+  docker_build_push_image:
+    docker:
+      - image: circleci/buildpack-deps:stretch
+    steps:
+      - attach_workspace:
+          at: /home/circleci
+      - run:
+          name: Build docker image from Dockerfile
+          command: docker build -t resume-as-a-service:latest .
+      - run:
+          name: Publish Docker Image to Docker Hub
+          command: |
+            echo "$DOCKERHUB_PASS" | docker login -u "$DOCKERHUB_USERNAME" --password-stdin
+            docker push resume-as-a-service:latest
 
 workflows:
   dev:
@@ -20,39 +39,21 @@ workflows:
           filters:
             branches:
               only: dev
-      - aws-ecr/build-and-push-image:
+      - docker_build_push_image:
           requires:
             - npm_install_and_test
           filters:
             branches:
               only: dev
-          account-url: AWS_ECR_ACCOUNT_URL
-          aws-access-key-id: ACCESS_KEY_ID
-          aws-secret-access-key: SECRET_ACCESS_KEY
-          dockerfile: Dockerfile
-          no-output-timeout: 20m
-          path: .
-          region: AWS_REGION
-          repo: resume-as-a-service
-          tag: 'latest-dev'
   master:
     jobs:
       - npm_install_and_test:
           filters:
             branches:
               only: master
-      - aws-ecr/build-and-push-image:
+      - docker_build_push_image:
           requires:
             - npm_install_and_test
           filters:
             branches:
               only: master
-          account-url: AWS_ECR_ACCOUNT_URL
-          aws-access-key-id: ACCESS_KEY_ID
-          aws-secret-access-key: SECRET_ACCESS_KEY
-          dockerfile: Dockerfile
-          no-output-timeout: 20m
-          path: .
-          region: AWS_REGION
-          repo: resume-as-a-service
-          tag: 'latest-prod'
