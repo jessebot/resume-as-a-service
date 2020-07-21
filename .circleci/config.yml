@@ -16,10 +16,6 @@ jobs:
 workflows:
   dev:
     jobs:
-      - npm_install_and_test:
-          filters:
-            branches:
-              only: dev
       - docker/publish:
           requires:
             - npm_install_and_test
