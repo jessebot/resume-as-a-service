@@ -13,20 +13,21 @@ jobs:
             - run: npm install
             - run: npm test
 
-  check-and-build-only:
+  check_and_build_only:
     executor: docker/machine
     steps:
       - checkout
       - docker/check
       - docker/build:
           image: domojesse/resume-as-a-service
-  
 
 workflows:
   dev:
     jobs:
-      - check-and-build-only
+      - check_and_build_only
       - docker/publish:
+          requires:
+            - check_and_build_only
           image: domojesse/resume-as-a-service
           tag: 'latest,dev'
   master:
