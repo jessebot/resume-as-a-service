@@ -39,12 +39,14 @@ function App() {
       <Row className="justify-content-md-center">
       <Col md={{ span: 7 }}>
 			<Card className="text-center" bg="dark">
-				<Card.Header>About the Engineer</Card.Header>
+				<Card.Header>About Jesse Hitch</Card.Header>
 				<Card.Body>
-                  <Image src="/jesse_july_2020.jpg" alt="Jesse A Hitch" style={{ height: '200px' }} roundedCircle fluid />
+                  <Image src="/jesse_july_2020.jpg" alt="Jesse Hitch headshot photo" style={{ height: '200px' }} roundedCircle fluid />
                   <Card.Title className="text-muted">(They/Them)</Card.Title>
-				  <Card.Text>
-				  My name is Jesse Hitch, and I'm a master of being a jack of all trades, also known as a DevOps engineer. I automate, create tool sets, and nerd out on the back end of the internet. Python is my weapon of choice, and Linux remains my valiant companion! Together we navigate the dark waters of Kubernetes and ECS, and conquer the beast that is Docker! I have also been known to wrangle your CI/CD process and relieve developer headaches. You can learn more about what I do in my resume below. Click the top right corner of this page to see the source code, and other project I've worked on.
+                  <Card.Text>
+                  I'm a master of being a jack of all trades, also known as a DevOps engineer. I automate development pipelines, create tool sets, and nerd out on the back end of the internet. Python is my weapon of choice, and Linux remains my valiant companion! Together we navigate the dark waters of Kubernetes and ECS, and conquer the beast that is Docker! I am excellent at relieving developer headaches due to tedious technical tasks.
+                  
+                  <div className="text-muted">You can download a live PDF of my resume and learn more about what I do at my LinkedIn and GitHub profiles linked below.</div>
 				  </Card.Text>
 				</Card.Body>
                 <Card.Footer>
