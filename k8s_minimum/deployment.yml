@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: resume-as-a-service-deployment
+  labels:
+    app: resume-as-a-service
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: resume-as-a-service
+  template:
+    metadata:
+      labels:
+        app: resume-as-a-service
+    spec:
+      containers:
+      - name: resume-as-a-service
+        image: your-docker-username/resume-as-a-service
+        stdin: true
+        tty: true
+        ports:
+        - containerPort: 3000

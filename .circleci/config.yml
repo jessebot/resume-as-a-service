@@ -16,17 +16,12 @@ jobs:
 workflows:
   dev:
     jobs:
-      - docker/publish:
-          requires:
-            - npm_install_and_test
-          image: domojesse/resume-as-a-service
-          tag: 'latest,dev'
-  master:
-    jobs:
       - npm_install_and_test:
           filters:
             branches:
-              only: master
+              only: dev
+  master:
+    jobs:
       - docker/publish:
           requires:
             - npm_install_and_test

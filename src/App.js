@@ -27,7 +27,7 @@ function renderTooltip2(props) {
 function renderTooltip3(props) {
   return (
     <Tooltip id="resume-tooltip" {...props}>
-      Resume in Google Docs
+      Resume as a PDF
     </Tooltip>
   );
 }
@@ -60,7 +60,7 @@ function App() {
                      </Col>
                      <Col sm={3} xs={3}>
 						<OverlayTrigger
-						  placement="bottom"
+						  placement="left"
 						  delay={{ show: 250, hide: 400 }}
 						  overlay={renderTooltip2}
                          >
@@ -73,7 +73,7 @@ function App() {
 						  delay={{ show: 250, hide: 400 }}
 						  overlay={renderTooltip3}
                          >
-                        <a href="https://docs.google.com/document/d/1O-qsyVP444QeaBi9EwygDlGzIWvMMUJP80cPsk2Z6lg/edit?usp=sharing"><Image src="/googledocs.svg" alt="Resume" style={{ height: '60px' }} /></a>
+                        <a href="https://docs.google.com/document/d/1O-qsyVP444QeaBi9EwygDlGzIWvMMUJP80cPsk2Z6lg/export?format=pdf"><Image src="/googledocs.svg" alt="Resume as a PDF" style={{ height: '60px' }} /></a>
                         </OverlayTrigger>
                      </Col>
                    </Row>
