@@ -23,7 +23,8 @@ workflows:
   master:
     jobs:
       - docker/publish:
-          requires:
-            - npm_install_and_test
           image: domojesse/resume-as-a-service
           tag: 'latest,prod'
+          filters:
+            branches:
+              only: master
