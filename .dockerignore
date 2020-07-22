@@ -1,3 +1,6 @@
 node_modules
 .dockerignore
 Dockerfile
+k8s_minimum
+README.md
+REACT_README.md
