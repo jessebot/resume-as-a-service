@@ -20,6 +20,12 @@ workflows:
           filters:
             branches:
               only: dev
+#      - docker/publish:
+#          image: domojesse/resume-as-a-service
+#          tag: 'latest,dev'
+#          filters:
+#            branches:
+#              only: master
   master:
     jobs:
       - docker/publish:
