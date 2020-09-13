@@ -22,8 +22,14 @@ nginx-ingress controller, and let's encrypt's certmanager setup with helm.
 If you're on digital ocean, you can just one click install nginx-ingress. For 
 Let's Encrypt though, you'll need the below commands:
 
+*Create the Namespace*
 `kubectl create namespace cert-manager`
+
+*Add the helm repo to cache*
 `helm repo add jetstack https://charts.jetstack.io`
+*Make sure your repos are up to date*
+`helm repo update`
+*Install letsencrypt via helm*
 `helm install cert-manager --namespace cert-manager jetstack/cert-manager --version v0.14.1`
 
 * `lets_encrypt_prod_issuer.yml`
