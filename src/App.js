@@ -36,46 +36,49 @@ function App() {
   return (
     <div className="App">
      <Container>
-      <Row className="justify-content-md-center">
-      <Col md={{ span: 7 }}>
+     <Row className="justify-content-md-center">
+      <Col md={{ span: 8 }}>
 			<Card className="text-center" bg="dark">
-				<Card.Header>About Jesse Hitch</Card.Header>
-				<Card.Body>
-                  <Image src="/jesse_july_2020.jpg" alt="Jesse Hitch headshot photo" style={{ height: '200px' }} roundedCircle fluid />
-                  <Card.Title className="text-muted">(They/Them)</Card.Title>
-                  <Card.Text>
-                  I'm a master of being a jack of all trades, also known as a DevOps engineer. I automate development pipelines, create tool sets, and nerd out on the back end of the internet. Python is my weapon of choice, and Linux remains my valiant companion! Together we navigate the dark waters of Kubernetes and ECS, and conquer the beast that is Docker! I am excellent at relieving developer headaches due to tedious technical tasks.
-                  
-                  <div className="text-muted">You can download a live PDF of my resume and learn more about what I do at my LinkedIn and GitHub profiles linked below.</div>
+			<Card.Body>
+            <Card.Text>
+            <Row className="justify-content-center" className="align-items-center">
+                <Col sm={5} xs={12}>
+                   <Image src={process.env.REACT_APP_PROFILE_PHOTO} alt={process.env.REACT_APP_PROFILE_PHOTO_ALT_TEXT} style={{ height: '200px' }} roundedCircle fluid />
+                   <Card.Title>{process.env.REACT_APP_NAME} <div className="text-muted">({process.env.REACT_APP_PRONOUNS})</div></Card.Title>
+                </Col>
+                <Col sm={7} xs={12}>
+                  {process.env.REACT_APP_BLURB}
+                </Col>
+            </Row>
 				  </Card.Text>
 				</Card.Body>
                 <Card.Footer>
                  <Row className="justify-content-center">
-                 <Col sm={3} xs={3}>
-						<OverlayTrigger
-						  placement="left"
-						  delay={{ show: 250, hide: 400 }}
-						  overlay={renderTooltip}
-                         >
-                             <a href="https://github.com/jessebot"><Image src="/github-cat.svg" alt="GitHub" style={{ height: '60px' }} /></a>
-                        </OverlayTrigger>
-                     </Col>
-                     <Col sm={3} xs={3}>
-						<OverlayTrigger
-						  placement="left"
-						  delay={{ show: 250, hide: 400 }}
-						  overlay={renderTooltip2}
-                         >
-                        <a href="https://www.linkedin.com/in/jesse-hitch/"><Image src="/linkedin.svg" alt="LinkedIn" style={{ height: '60px' }} /></a>
-                        </OverlayTrigger>
-                     </Col>
-                     <Col sm={3} xs={3}>
+                     <Col sm={4} xs={4}>
 						<OverlayTrigger
 						  placement="right"
 						  delay={{ show: 250, hide: 400 }}
 						  overlay={renderTooltip3}
                          >
-                        <a href="https://docs.google.com/document/d/1O-qsyVP444QeaBi9EwygDlGzIWvMMUJP80cPsk2Z6lg/export?format=pdf"><Image src="/googledocs.svg" alt="Resume as a PDF" style={{ height: '60px' }} /></a>
+                        <a href="{process.env.REACT_APP_RESUME_PDF_URL}"><Image src="/googledocs.svg" alt="Resume as a PDF" style={{ height: '60px' }} /></a>
+                        </OverlayTrigger>
+                     </Col>
+                     <Col sm={4} xs={4}>
+						<OverlayTrigger
+						  placement="left"
+						  delay={{ show: 250, hide: 400 }}
+						  overlay={renderTooltip}
+                         >
+                             <a href="{process.env.REACT_APP_GIT_URL}"><Image src="/github-cat.svg" alt="GitHub" style={{ height: '60px' }} /></a>
+                        </OverlayTrigger>
+                     </Col>
+                     <Col sm={4} xs={4}>
+						<OverlayTrigger
+						  placement="left"
+						  delay={{ show: 250, hide: 400 }}
+						  overlay={renderTooltip2}
+                         >
+                        <a href="{process.env.REACT_APP_LINKEDIN_URL}"><Image src="/linkedin.svg" alt="LinkedIn" style={{ height: '60px' }} /></a>
                         </OverlayTrigger>
                      </Col>
                    </Row>

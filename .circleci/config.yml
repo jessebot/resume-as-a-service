@@ -14,19 +14,13 @@ jobs:
             - run: npm test
 
 workflows:
-  dev:
+  default:
     jobs:
       - npm_install_and_test:
           filters:
             branches:
               only: dev
-#      - docker/publish:
-#          image: domojesse/resume-as-a-service
-#          tag: 'latest,dev'
-#          filters:
-#            branches:
-#              only: master
-  master:
+  main:
     jobs:
       - docker/publish:
           image: domojesse/resume-as-a-service

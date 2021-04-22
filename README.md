@@ -1,22 +1,20 @@
 Resume as a Service (RaaS)
 =====================
-This is a single page resume website optimized for devops engineers.
+This is a single page resume website optimized for DevOps Engineers&trade;
 
 This serves as a great project to get started with some common technologies for
 the field. I'll go over the entire stack with you below.
 
-Sample Site
------------
 A demo lives [here](https://jessebot.io).
 
 Setting up your own RaaS
 -------------------------
 *Under Construction*
-* Modify the `config.json` file for your own metadata.
+* Modify the `.env` file for your own metadata.
 * Make sure you copy whatever image you want to use as your profile photo into 
   the `public` directory.
 * Make sure you have `npm` installed.
-* To test locally, follow along in the `REACT_README.md` file: `npm ci && npm start`
+* To test locally: `npm ci && npm start`
 * If you want CI/CD to work, you'll need to modify the circleci file here to 
   have your own docker username :)
 
@@ -37,14 +35,16 @@ running on Kubernetes! :)
 Under the Hood
 --------------
 
-*Frontend*
+### Frontend
 * React
 * Bootstrap
 
-*Backend*
-* node.js
-* Docker
+### Backend
 * Kubernetes
+* Docker
+* node.js
+
+### CI/CD
 * Circleci
 
 _And special thanks to..._
