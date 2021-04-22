@@ -35,13 +35,13 @@ function renderTooltip3(props) {
 function App() {
   return (
     <div className="App">
-     <Container>
+     <Container fluid>
      <Row className="justify-content-md-center">
-      <Col md={{ span: 8 }}>
+      <Col md={10} sm={12} lg={8} xl={6}>
 			<Card className="text-center" bg="dark">
 			<Card.Body>
             <Card.Text>
-            <Row className="justify-content-center" className="align-items-center">
+            <Row className="justify-content-center align-items-center">
                 <Col sm={5} xs={12}>
                    <Image src={process.env.REACT_APP_PROFILE_PHOTO} alt={process.env.REACT_APP_PROFILE_PHOTO_ALT_TEXT} style={{ height: '200px' }} roundedCircle fluid />
                    <Card.Title>{process.env.REACT_APP_NAME} <div className="text-muted">({process.env.REACT_APP_PRONOUNS})</div></Card.Title>

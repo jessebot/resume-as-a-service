@@ -32,6 +32,10 @@ resumes, and we will get all the jobs!
 See the `README.md` in the `k8s_minimum` directory for getting this up and
 running on Kubernetes! :)
 
+TODOs
+-----
+* Fix vertical centering on desktop
+
 Under the Hood
 --------------
 

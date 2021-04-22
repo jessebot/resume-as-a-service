@@ -17,9 +17,9 @@ workflows:
   default:
     jobs:
       - npm_install_and_test
-  main:
-    jobs:
       - docker/publish:
+          requires:
+            - npm_install_and_test
           image: domojesse/resume-as-a-service
           tag: 'latest,prod'
           filters:
