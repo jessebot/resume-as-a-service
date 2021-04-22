@@ -10,7 +10,7 @@ A demo lives [here](https://jessebot.io).
 Setting up your own RaaS
 -------------------------
 *Under Construction*
-* Modify the `config.json` file for your own metadata.
+* Modify the `.env` file for your own metadata.
 * Make sure you copy whatever image you want to use as your profile photo into 
   the `public` directory.
 * Make sure you have `npm` installed.
