@@ -37,7 +37,7 @@ function App() {
     <div className="App">
      <Container>
      <Row className="justify-content-md-center">
-      <Col md={{ span: 7 }}>
+      <Col md={{ span: 8 }}>
 			<Card className="text-center" bg="dark">
 			<Card.Body>
             <Card.Text>
@@ -50,12 +50,20 @@ function App() {
                   {process.env.REACT_APP_BLURB}
                 </Col>
             </Row>
-                  <div className="text-muted">You can check out my LinkedIn and GitHub profiles, as well as download a live PDF of my resume, below.</div>
 				  </Card.Text>
 				</Card.Body>
                 <Card.Footer>
                  <Row className="justify-content-center">
-                 <Col sm={3} xs={3}>
+                     <Col sm={4} xs={4}>
+						<OverlayTrigger
+						  placement="right"
+						  delay={{ show: 250, hide: 400 }}
+						  overlay={renderTooltip3}
+                         >
+                        <a href="{process.env.REACT_APP_RESUME_PDF_URL}"><Image src="/googledocs.svg" alt="Resume as a PDF" style={{ height: '60px' }} /></a>
+                        </OverlayTrigger>
+                     </Col>
+                     <Col sm={4} xs={4}>
 						<OverlayTrigger
 						  placement="left"
 						  delay={{ show: 250, hide: 400 }}
@@ -64,22 +72,13 @@ function App() {
                              <a href="{process.env.REACT_APP_GIT_URL}"><Image src="/github-cat.svg" alt="GitHub" style={{ height: '60px' }} /></a>
                         </OverlayTrigger>
                      </Col>
-                     <Col sm={3} xs={3}>
+                     <Col sm={4} xs={4}>
 						<OverlayTrigger
 						  placement="left"
 						  delay={{ show: 250, hide: 400 }}
 						  overlay={renderTooltip2}
                          >
                         <a href="{process.env.REACT_APP_LINKEDIN_URL}"><Image src="/linkedin.svg" alt="LinkedIn" style={{ height: '60px' }} /></a>
-                        </OverlayTrigger>
-                     </Col>
-                     <Col sm={3} xs={3}>
-						<OverlayTrigger
-						  placement="right"
-						  delay={{ show: 250, hide: 400 }}
-						  overlay={renderTooltip3}
-                         >
-                        <a href="{process.env.REACT_APP_RESUME_PDF_URL}"><Image src="/googledocs.svg" alt="Resume as a PDF" style={{ height: '60px' }} /></a>
                         </OverlayTrigger>
                      </Col>
                    </Row>
