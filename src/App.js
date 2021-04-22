@@ -37,7 +37,7 @@ function App() {
     <div className="App">
      <Container>
      <Row className="justify-content-md-center">
-      <Col md={{ span: 8 }}>
+      <Col md={10} sm={12} lg={8}>
 			<Card className="text-center" bg="dark">
 			<Card.Body>
             <Card.Text>
