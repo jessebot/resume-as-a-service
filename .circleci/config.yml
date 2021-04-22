@@ -16,13 +16,6 @@ jobs:
 workflows:
   default:
     jobs:
-      - npm_install_and_test:
-          filters:
-            branches:
-              ignore: main
-
-  main:
-    jobs:
       - npm_install_and_test
       - docker/publish:
           requires:
