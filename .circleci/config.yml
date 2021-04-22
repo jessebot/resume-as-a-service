@@ -16,10 +16,7 @@ jobs:
 workflows:
   default:
     jobs:
-      - npm_install_and_test:
-          filters:
-            branches:
-              only: dev
+      - npm_install_and_test
   main:
     jobs:
       - docker/publish:
@@ -27,4 +24,4 @@ workflows:
           tag: 'latest,prod'
           filters:
             branches:
-              only: master
+              only: main
