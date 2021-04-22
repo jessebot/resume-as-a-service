@@ -23,6 +23,7 @@ workflows:
 
   main:
     jobs:
+      - npm_install_and_test
       - docker/publish:
           requires:
             - npm_install_and_test
