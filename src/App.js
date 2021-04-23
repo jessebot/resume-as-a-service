@@ -45,7 +45,6 @@ function App () {
                     <Col sm={5} xs={12}>
                       <Image src={process.env.REACT_APP_PROFILE_PHOTO}
                              alt={process.env.REACT_APP_PROFILE_PHOTO_ALT_TEXT}
-                             style={{ height: '200px' }}
                              roundedCircle fluid />
                       <Card.Title>
                         {process.env.REACT_APP_NAME}
@@ -53,7 +52,9 @@ function App () {
                       </Card.Title>
                     </Col>
                     <Col sm={7} xs={12}>
-                      {process.env.REACT_APP_BLURB}
+                      <div className='blurb'>
+                        {process.env.REACT_APP_BLURB}
+                      </div>
                     </Col>
                   </Row>
                 </Card.Text>

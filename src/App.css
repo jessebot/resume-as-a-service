@@ -8,6 +8,15 @@
   display: center;
 }
 
+.img-fluid.rounded-circle {
+  height: 185px;
+  padding-bottom: 12px;
+}
+
+.blurb {
+  padding: 5px;
+}
+
 body {
   text-align: center;
   background-color: #212529;

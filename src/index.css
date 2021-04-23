@@ -1,5 +1,5 @@
 body {
-  padding-top: 15px;
+  padding-top: 14px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -8,15 +8,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-@media only screen and (min-width: 768px) {
+/* mid option */
+@media only screen and (min-width: 576px) {
   body {
-    padding-top: 65px;
+    padding-top: 110px;
   }
 }
 
-@media only screen and (min-width: 1025px) {
+/* ipad pro 2020 and bigger */
+@media only screen and (min-width: 768px) {
   body {
-    padding-top: 80px;
+    padding-top: 150px;
   }
 }
 
