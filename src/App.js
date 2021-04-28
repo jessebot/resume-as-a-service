@@ -63,17 +63,17 @@ function App () {
                 <Row className='justify-content-center'>
                   <Col sm={4} xs={4}>
                     <OverlayTrigger placement='right' delay={{ show: 250, hide: 400 }} overlay={renderTooltip3}>
-                      <a href='{process.env.REACT_APP_RESUME_PDF_URL}'><Image src='/googledocs.svg' alt='Resume as a PDF' style={{ height: '60px' }} /></a>
+                      <a href={process.env.REACT_APP_RESUME_PDF_URL}><Image src='/googledocs.svg' alt='Resume as a PDF' style={{ height: '60px' }} /></a>
                     </OverlayTrigger>
                   </Col>
                   <Col sm={4} xs={4}>
                     <OverlayTrigger placement='left' delay={{ show: 250, hide: 400 }} overlay={renderTooltip}>
-                      <a href='{process.env.REACT_APP_GIT_URL}'><Image src='/github-cat.svg' alt='GitHub' style={{ height: '60px' }} /></a>
+                      <a href={process.env.REACT_APP_GIT_URL} target='_blank'><Image src='/github-cat.svg' alt='GitHub' style={{ height: '60px' }} /></a>
                     </OverlayTrigger>
                   </Col>
                   <Col sm={4} xs={4}>
                     <OverlayTrigger placement='left' delay={{ show: 250, hide: 400 }} overlay={renderTooltip2}>
-                      <a href='{process.env.REACT_APP_LINKEDIN_URL}'><Image src='/linkedin.svg' alt='LinkedIn' style={{ height: '60px' }} /></a>
+                      <a href={process.env.REACT_APP_LINKEDIN_URL} target='_blank'><Image src='/linkedin.svg' alt='LinkedIn' style={{ height: '60px' }} /></a>
                     </OverlayTrigger>
                   </Col>
                 </Row>
