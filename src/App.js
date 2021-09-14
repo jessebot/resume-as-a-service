@@ -68,12 +68,12 @@ function App () {
                   </Col>
                   <Col sm={4} xs={4}>
                     <OverlayTrigger placement='left' delay={{ show: 250, hide: 400 }} overlay={renderTooltip}>
-                      <a href={process.env.REACT_APP_GIT_URL} target='_blank' rel="noreferrer"><Image src='/github-cat.svg' alt='GitHub' style={{ height: '60px' }} /></a>
+                      <a href={process.env.REACT_APP_GIT_URL} target='_blank' rel='noreferrer'><Image src='/github-cat.svg' alt='GitHub' style={{ height: '60px' }} /></a>
                     </OverlayTrigger>
                   </Col>
                   <Col sm={4} xs={4}>
                     <OverlayTrigger placement='left' delay={{ show: 250, hide: 400 }} overlay={renderTooltip2}>
-                      <a href={process.env.REACT_APP_LINKEDIN_URL} target='_blank' rel="noreferrer"><Image src='/linkedin.svg' alt='LinkedIn' style={{ height: '60px' }} /></a>
+                      <a href={process.env.REACT_APP_LINKEDIN_URL} target='_blank' rel='noreferrer'><Image src='/linkedin.svg' alt='LinkedIn' style={{ height: '60px' }} /></a>
                     </OverlayTrigger>
                   </Col>
                 </Row>

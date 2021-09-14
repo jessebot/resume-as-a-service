@@ -10,11 +10,9 @@ ENV PATH /app/node_modules/.bin:$PATH
 # install app dependencies
 COPY . /app
 RUN npm ci
-# RUN npm run build
-# RUN npm install -g serve
+RUN npm run build
 
-EXPOSE 3000
+EXPOSE 5000
 
 # start app
-# CMD ["serve", "-s", "build"]
-CMD ["npm", "start"]
+CMD ["serve", "-s", "build"]
