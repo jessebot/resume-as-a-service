@@ -12,7 +12,8 @@ COPY . /app
 RUN npm ci
 RUN npm run build
 
-EXPOSE 5000
+EXPOSE 3000
 
 # start app
-CMD ["serve", "-s", "build"]
+# CMD ["serve", "-s", "build"]
+CMD ["npm", "start"]
