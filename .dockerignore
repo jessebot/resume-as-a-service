@@ -1,9 +1,19 @@
+.cache
+# npm ci will work faster if we exclude this
 node_modules
+build
+
+# docker stuff
 .dockerignore
 Dockerfile
-k8s_minimum
+
+# readmes probably not needed
 README.md
 REACT_README.md
+
+# git cache stuff
 .github/
 .git
-.cache
+
+# cicd
+circleci/

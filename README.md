@@ -9,14 +9,22 @@ A demo lives [here](https://jessebot.io).
 
 Setting up your own RaaS
 -------------------------
-*Under Construction*
 * Modify the `.env` file for your own metadata.
 * Make sure you copy whatever image you want to use as your profile photo into 
   the `public` directory.
 * Make sure you have `npm` installed.
 * To test locally: `npm ci && npm start`
-* If you want CI/CD to work, you'll need to modify the circleci file here to 
-  have your own docker username :)
+
+*CircleCI CI/CD Setup*
+* You'll need to modify the CircleCI file (`circleci/.circleci/config.yml`) to have your own docker info :)
+* Run the following: `mv circleci/.circleci/config.yml .circleci/config.yml`
+* Set up your project, at [CircleCI](https://app.circleci.com/) - you'll need to connect your GitHub
+* Make sure the following environmental variables are set up in your Project Settings:
+  `DOCKER_LOGIN` (docker registry username) and `DOCKER_PASSWORD` (docker registry password)
+* Should be able to do a commit and it kicks off a push to your docker repo :D
+
+*GHA CI/CD Setup*
+* Hold on, I'm working on this. We'll have ya all setup in a jiffy!
 
 For help developing and testing
 -----------------------------
@@ -32,10 +40,6 @@ resumes, and we will get all the jobs!
 See the `README.md` in the `k8s_minimum` directory for getting this up and
 running on Kubernetes! :)
 
-TODOs
------
-* Fix vertical centering on desktop
-
 Under the Hood
 --------------
 
@@ -50,6 +54,7 @@ Under the Hood
 
 ### CI/CD
 * Circleci
+* Currently working on moving to GHA :D
 
 _And special thanks to..._
 * The Open Source Community <3
