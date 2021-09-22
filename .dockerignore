@@ -4,3 +4,6 @@ Dockerfile
 k8s_minimum
 README.md
 REACT_README.md
+.github/
+.git
+.cache
