@@ -1,6 +1,4 @@
 # pull official base image
-# FROM node:14.4-alpine3.12
-# FROM node:13.12.0-alpine
 FROM node:current-slim
 
 # set working directory

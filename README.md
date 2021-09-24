@@ -2,6 +2,14 @@ Resume as a Service (RaaS)
 =====================
 This is a single page resume website optimized for DevOps Engineers&trade;
 
+It includes the ability to modify:
+* Profile Photo
+* Name and pronouns
+* Small blurb about yourself
+* GitHub profile link
+* LinkedIn profile link
+* PDF download of your CV from an external link (such as Google Docs)
+
 This serves as a great project to get started with some common technologies for
 the field. I'll go over the entire stack with you below.
 
@@ -53,7 +61,7 @@ running on Kubernetes! :)
 Shameless call for code friends
 -------------------------------
 Tired of never having anything to point to
-outside of your closed source projects for other companies? Why not contribute
+outside of your closed source projects for other companies? Why not contribute 
 and play with my project! :D
 
 Together, we'll have the cheapest, fastest, most scalable, and highly available
@@ -68,7 +76,7 @@ Under the Hood
 * [React-Bootstrap](https://react-bootstrap.github.io/)
 
 ### Backend
-* Docker
+* Docker - A slim version of the default node.js image
 * [node.js](https://nodejs.org/en/)
 
 ### CI/CD
