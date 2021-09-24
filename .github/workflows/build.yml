@@ -28,6 +28,8 @@ jobs:
         uses: docker/metadata-action@v3
         with:
           images: ${{ secrets.DOCKER_USERNAME }}/resume-as-a-service
+          tags: |
+            type=semver,pattern={{version}}
 
       - name: Build and push
         uses: docker/build-push-action@v2

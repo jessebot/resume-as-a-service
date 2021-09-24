@@ -13,12 +13,16 @@ Setting up your own RaaS
 * Make sure you copy whatever image you want to use as your profile photo into 
   the `public` directory.
 * Make sure you have `npm` installed.
-* To test locally with a dev build: `npm ci && npm start`
-  * Then go to http://localhost:3000 in a browser.
-* To test locally with a prod build: `npm run build && serve -s build`
+* To test locally with a prod build:
+  ```
+  npm ci
+  npm run build
+  npm start
+  ```
   * Then go to http://localhost:5000 in a browser.
 
 *CircleCI CI/CD Setup*
+This will just push to DockerHub using the `latest` tag.
 * You'll need to modify the CircleCI file (`circleci/.circleci/config.yml`) to have your own docker info :)
 * Run the following: `mv circleci/.circleci/config.yml .circleci/config.yml`
 * Set up your project, at [CircleCI](https://app.circleci.com/) - you'll need to connect your GitHub
@@ -28,7 +32,8 @@ Setting up your own RaaS
 * Should be able to do a commit and it kicks off a push to your docker repo :D
 
 *GHA CI/CD Setup*
-Currently this just builds your Dockerfile, and then pushes to a DockerHub repo called resume-as-a-service for your docker user. It assumes you're already using git tags to tag your pushes, and pushes those upstream as well.
+Currently this just builds your Dockerfile, and then pushes to a DockerHub repo called resume-as-a-service for your DockerHub user. It assumes you're already using git tags to tag your pushes, and pushes those upstream as well.
+
 * The configuration file is already present in `.github/workflows/build.yml` for you to modify.
 * Set up your GitHub Repository Secrets in Settings > Secrets. You'll need the following: 
   * `DOCKER_USERNAME` (docker registry username)
@@ -52,17 +57,14 @@ Under the Hood
 --------------
 
 ### Frontend
-* React
-* Bootstrap
+* [React-Bootstrap](https://react-bootstrap.github.io/)
 
 ### Backend
-* Kubernetes
 * Docker
 * node.js
 
 ### CI/CD
-* Circleci
-* Currently working on moving to GHA :D
+* GitHub Actions (with CircleCI as an option)
 
 _And special thanks to..._
 * The Open Source Community <3
