@@ -13,18 +13,24 @@ Setting up your own RaaS
 * Make sure you copy whatever image you want to use as your profile photo into 
   the `public` directory.
 * Make sure you have `npm` installed.
-* To test locally: `npm ci && npm start`
+* To test locally with a dev build: `npm ci && npm start`
+  * Then go to http://localhost:3000 in a browser.
+* To test locally with a prod build: `npm run build && serve -s build`
+  * Then go to http://localhost:5000 in a browser.
 
 *CircleCI CI/CD Setup*
 * You'll need to modify the CircleCI file (`circleci/.circleci/config.yml`) to have your own docker info :)
 * Run the following: `mv circleci/.circleci/config.yml .circleci/config.yml`
 * Set up your project, at [CircleCI](https://app.circleci.com/) - you'll need to connect your GitHub
 * Make sure the following environmental variables are set up in your Project Settings:
-  `DOCKER_LOGIN` (docker registry username) and `DOCKER_PASSWORD` (docker registry password)
+  * `DOCKER_LOGIN` (docker registry username)
+  * `DOCKER_PASSWORD` (docker registry password)
 * Should be able to do a commit and it kicks off a push to your docker repo :D
 
 *GHA CI/CD Setup*
-* Hold on, I'm working on this. We'll have ya all setup in a jiffy!
+* Set up your GitHub Repository Secrets in Settings > Secrets. You'll need the following: 
+  * `DOCKER_USERNAME` (docker registry username)
+  * `DOCKER_PASSWORD` (docker registry password)
 
 For help developing and testing
 -----------------------------
