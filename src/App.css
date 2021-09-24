@@ -32,6 +32,5 @@ body {
   color: silver;
   justify-content: center;
   align-items: center;
-  flex-direction: center;
-  display: center;
+  display: flex;
 }

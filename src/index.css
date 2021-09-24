@@ -8,17 +8,24 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* mid option */
+/* mid range tablet option */
 @media only screen and (min-width: 576px) {
   body {
     padding-top: 110px;
   }
 }
 
-/* ipad pro 2020 and bigger */
+/* ipad pro 2020ish */
 @media only screen and (min-width: 768px) {
   body {
     padding-top: 150px;
+  }
+}
+
+/* desktop and bigger */
+@media only screen and (min-width: 2100px) {
+  body {
+    padding-top: 350px;
   }
 }
 

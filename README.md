@@ -52,11 +52,19 @@ This will just push to DockerHub using the `latest` tag.
   * `DOCKER_PASSWORD` (docker registry password)
 * Should be able to do a commit and it kicks off a push to your docker repo :D
 
-#### Coming Soon
-A complete walkthrough on deploying this to K8s, AWS ECS/Fargate, and different App Platforms, such as [Digital Ocean's App Platform](https://www.digitalocean.com/products/app-platform/)
+## Coming Soon
+ - Better Accessibility - currently only alt text is provided for the profile
+   image, and we can certainly do better for people who use screen readers!
+ - Color pickers - currently we only support dark tones with blue accents
+ - Complete walkthrough on deploying this to:
+   * K8s
+     * See the `README.md` in the `k8s_minimum` directory for the beginnings of
+       getting this up and running on Kubernetes! :)
+   * AWS ECS/Fargate
+   * Additional App Platforms, such as [Digital Ocean's App Platform](https://www.digitalocean.com/products/app-platform/)
+- Better spacing depending on different mediums. Currently only optimized for 
+  mobile and smaller screens. Need to test on 24+ inch 4k monitors.
 
-See the `README.md` in the `k8s_minimum` directory for getting this up and
-running on Kubernetes! :)
 
 Shameless call for code friends
 -------------------------------
