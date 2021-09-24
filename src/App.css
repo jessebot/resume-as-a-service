@@ -17,6 +17,15 @@
   padding: 4px;
 }
 
+.card {
+  background-color: #393c40;
+}
+
+.card-footer {
+  background-color: rgba(230, 230, 230, 0.03);
+  border-top: 1px solid rgba(130, 130, 130, 0.13);
+}
+
 body {
   text-align: center;
   background-color: #212529;

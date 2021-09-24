@@ -28,6 +28,8 @@ Setting up your own RaaS
 * Should be able to do a commit and it kicks off a push to your docker repo :D
 
 *GHA CI/CD Setup*
+Currently this just builds your Dockerfile, and then pushes to a DockerHub repo called resume-as-a-service for your docker user. It assumes you're already using git tags to tag your pushes, and pushes those upstream as well.
+* The configuration file is already present in `.github/workflows/build.yml` for you to modify.
 * Set up your GitHub Repository Secrets in Settings > Secrets. You'll need the following: 
   * `DOCKER_USERNAME` (docker registry username)
   * `DOCKER_PASSWORD` (docker registry password)

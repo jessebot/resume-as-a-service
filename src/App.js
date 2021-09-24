@@ -1,12 +1,13 @@
-import React from 'react'
-import Card from 'react-bootstrap/Card'
-import Col from 'react-bootstrap/Col'
-import Container from 'react-bootstrap/Container'
-import Image from 'react-bootstrap/Image'
-import OverlayTrigger from 'react-bootstrap/OverlayTrigger'
-import Row from 'react-bootstrap/Row'
-import Tooltip from 'react-bootstrap/Tooltip'
-import './App.css'
+import React from 'react';
+import Card from 'react-bootstrap/Card';
+import Col from 'react-bootstrap/Col';
+import Container from 'react-bootstrap/Container';
+import Image from 'react-bootstrap/Image';
+import OverlayTrigger from 'react-bootstrap/OverlayTrigger';
+import Row from 'react-bootstrap/Row';
+import Tooltip from 'react-bootstrap/Tooltip';
+
+import './App.css';
 
 function renderTooltip (props) {
   return (
@@ -32,13 +33,12 @@ function renderTooltip3 (props) {
   )
 }
 
-function App () {
-  return (
+const App = () => (
     <div className='App'>
       <Row className='justify-content-md-center align-items-center'>
         <Col md={10} sm={12} lg={8} xl={6}>
           <Container fluid>
-            <Card className='text-center' bg='dark'>
+            <Card className='text-center'>
               <Card.Body>
                 <Card.Text>
                   <Row className='justify-content-center align-items-center'>
@@ -83,7 +83,6 @@ function App () {
         </Col>
       </Row>
     </div>
-  )
-}
+  );
 
 export default App

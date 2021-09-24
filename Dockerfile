@@ -13,8 +13,8 @@ COPY . /app
 RUN npm ci
 RUN npm run build
 
+# make sure the port is accessible
 EXPOSE 5000
 
-# start app
-# CMD ["npm", "start"]
-CMD ["serve", "-s", "build"]
+# start app using serve -s build (defined in package.json)
+CMD ["npm", "start"]
