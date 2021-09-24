@@ -89,7 +89,7 @@ Under the Hood
 
 ### CI/CD
 * [GitHub Actions](https://github.com/features/actions)
-  * (with CircleCI as an option)
+  * (with [CircleCI](https://circleci.com/) as an option)
 
 _And special thanks to..._
 * The Open Source Community <3
