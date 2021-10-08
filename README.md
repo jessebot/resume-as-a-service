@@ -13,7 +13,7 @@ It includes the ability to modify:
 This serves as a great project to get started with some common technologies for
 the field. I'll go over the entire stack with you below.
 
-A demo lives [here](https://jessebot.io).
+A demo lives [here](https://jessebot.work).
 
 Setting up your own RaaS
 -------------------------
