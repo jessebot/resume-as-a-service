@@ -41,7 +41,7 @@ const App = () => (
               <Card.Body>
               <Row className="justify-content-center align-items-center row">
                 <Col lg={4}>
-                    <Image class="card-img" style='max-width: 90%;'
+                    <Image class="card-img"
                            src={process.env.REACT_APP_PROFILE_PHOTO}
                            alt={process.env.REACT_APP_PROFILE_PHOTO_ALT_TEXT}
                            roundedCircle fluid />
