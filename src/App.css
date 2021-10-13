@@ -18,9 +18,9 @@
 }
 
 .img-fluid {
-  padding-top: 5px;
-  padding-left: 5px;
-  max-width: 90%;
+  padding-top: 10px;
+  padding-left: 10px;
+  max-width: 95%;
 }
 
 body {
@@ -32,8 +32,16 @@ body {
   display: flex;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 455px) {
   .img-fluid {
+    padding: 0px;
     max-width: 59%;
+  }
+  .card-text {
+    font-size: small;
+  }
+  .card-body {
+    padding-right: 0px;
+    padding-left: 0px;
   }
 }
