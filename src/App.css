@@ -35,3 +35,10 @@ body {
   align-items: center;
   display: flex;
 }
+
+@media (max-width: 425px) {
+  .img-fluid {
+    padding-top: 10px;
+    max-width: 70%;
+  }
+}
