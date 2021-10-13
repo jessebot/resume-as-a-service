@@ -1,5 +1,4 @@
 body {
-  padding-top: 14px;
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -8,27 +7,27 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* mid range tablet option */
+/* mid range tablet option 
 @media only screen and (min-width: 576px) {
   body {
     padding-top: 110px;
   }
 }
 
-/* ipad pro 2020ish */
+/* ipad pro 2020ish
 @media only screen and (min-width: 768px) {
   body {
     padding-top: 150px;
   }
 }
 
-/* desktop and bigger */
+/* desktop and bigger
 @media only screen and (min-width: 2100px) {
   body {
     padding-top: 350px;
   }
 }
-
+*/
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;

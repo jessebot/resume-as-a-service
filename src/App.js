@@ -34,7 +34,7 @@ function renderTooltip3 (props) {
 }
 
 const App = () => (
-    <div className='App'>
+    <div className='App d-flex align-items-center justify-content-center vh-100'>
       <Row className='justify-content-md-center align-items-center'>
         <Col md={10} sm={12} lg={8} xl={6}>
           <Container fluid>
