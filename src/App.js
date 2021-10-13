@@ -40,8 +40,8 @@ const App = () => (
           <Card className='text-center mb-3'>
               <Card.Body>
               <Row className="justify-content-center align-items-center row">
-                <Col md={4}>
-                    <Image class="card-img"
+                <Col lg={4}>
+                    <Image class="card-img" style='max-width: 90%;'
                            src={process.env.REACT_APP_PROFILE_PHOTO}
                            alt={process.env.REACT_APP_PROFILE_PHOTO_ALT_TEXT}
                            roundedCircle fluid />
@@ -50,7 +50,7 @@ const App = () => (
                         <div className='text-muted'>({process.env.REACT_APP_PRONOUNS})</div>
                       </Card.Title>
                 </Col>
-                <Col md={8}>
+                <Col lg={8}>
                     <div className='container'>
                     <Card.Text>
                       {process.env.REACT_APP_BLURB}
