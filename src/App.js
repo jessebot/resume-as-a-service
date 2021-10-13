@@ -36,28 +36,28 @@ function renderTooltip3 (props) {
 const App = () => (
     <div className='App d-flex align-items-center justify-content-center vh-100'>
       <Row className='justify-content-md-center align-items-center'>
-        <Col md={10} sm={12} lg={8} xl={6}>
-          <Container fluid>
-            <Card className='text-center'>
+        <Col md={6}>
+          <Card className='text-center mb-3'>
               <Card.Body>
-                <Card.Text>
-                  <Row className='justify-content-center align-items-center'>
-                    <Col sm={5} xs={12}>
-                      <Image src={process.env.REACT_APP_PROFILE_PHOTO}
-                             alt={process.env.REACT_APP_PROFILE_PHOTO_ALT_TEXT}
-                             roundedCircle fluid />
+              <Row className="justify-content-center align-items-center row">
+                <Col md={4}>
+                    <Image class="card-img"
+                           src={process.env.REACT_APP_PROFILE_PHOTO}
+                           alt={process.env.REACT_APP_PROFILE_PHOTO_ALT_TEXT}
+                           roundedCircle fluid />
                       <Card.Title>
                         {process.env.REACT_APP_NAME}
                         <div className='text-muted'>({process.env.REACT_APP_PRONOUNS})</div>
                       </Card.Title>
-                    </Col>
-                    <Col sm={7} xs={12}>
-                      <div className='blurb'>
-                        {process.env.REACT_APP_BLURB}
-                      </div>
-                    </Col>
-                  </Row>
-                </Card.Text>
+                </Col>
+                <Col md={8}>
+                    <div className='container'>
+                    <Card.Text>
+                      {process.env.REACT_APP_BLURB}
+                     </Card.Text>
+                  </div>
+                </Col>
+              </Row>
               </Card.Body>
               <Card.Footer>
                 <Row className='justify-content-center'>
@@ -79,9 +79,8 @@ const App = () => (
                 </Row>
               </Card.Footer>
             </Card>
-          </Container>
-        </Col>
-      </Row>
+          </Col>
+        </Row>
     </div>
   );
 
