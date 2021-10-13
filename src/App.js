@@ -51,7 +51,7 @@ const App = () => (
                       </Card.Title>
                 </Col>
                 <Col lg={8}>
-                    <div className='container-fluid'>
+                    <div className='container'>
                     <Card.Text>
                       {process.env.REACT_APP_BLURB}
                      </Card.Text>
