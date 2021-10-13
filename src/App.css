@@ -21,9 +21,10 @@
   border-top: 1px solid rgba(130, 130, 130, 0.13);
 }
 
-.card-img {
+.img-fluid {
   padding-top: 5px;
   padding-left: 5px;
+  max-width: 90%;
 }
 
 body {
