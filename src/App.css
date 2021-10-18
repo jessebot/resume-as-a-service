@@ -2,14 +2,12 @@
   text-align: center;
   background-color: #212529;
   color: silver;
-  justify-content: center;
-  align-items: center;
-  flex-direction: center;
-  display: center;
+  box-shadow: inset 0 0 5rem rgba(0, 0, 0, .5);
 }
 
 .card {
   background-color: #393c40;
+  text-shadow: 0 .05rem .1rem rgba(0, 0, 0, .5);
 }
 
 .card-footer {
